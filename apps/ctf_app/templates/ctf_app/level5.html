@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Levevl 5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    
+</head>
+<body>
+    <style>
+        .wrapper {
+            display: inline-block;
+            height: 1000px;
+            width: 970px;
+            background-color: black;
+        }
+    
+        .header {
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: black;
+            height: 100px;
+            width: 900px;
+            border-radius: 8px;
+            border-style: solid;
+            border-color: whitesmoke;
+            box-shadow: black 8px 8px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+    
+        .challenge {
+            color: whitesmoke;
+            margin-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    
+        .challenge a {
+            color: whitesmoke;
+        }
+    </style>
+    {% load staticfiles %}
+    <div class="wrapper">
+        <a href="https://www.mobilefish.com/services/steganography/steganography.php" type='hidden'></a>
+        <div class="header">
+            <h1>Level 5</h1>
+        </div>
+        <div class="challenge">
+            <h4>This is only a picture. </h4>
+            <img src=" {% static 'ctf_app/steganographyhinthint.png' %}" alt='vegan goodness'>
+            <br>
+            <br>
+            <form action='level5Logic' method="POST">
+                {% csrf_token %}
+                <input type="text" name='test5'>
+                <input type="submit" name='submit'>
+            </form>
+            <br>
+            <br>
+            <br>
+            <p>Flag count: 4/5</p>
+            <a href='/' name='logout' value='Logout'>Logout</a>
+        </div>
+    </div>
+
+    
+</body>
+</html>
