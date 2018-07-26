@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Level 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <style>
+    .wrapper{
+        display: inline-block;
+        height: 1000px;
+        width: 970px;
+        background-color: black;
+    }
+    .header{
+        color: whitesmoke;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: black;
+        height: 100px;
+        width: 900px;
+        border-radius: 8px;
+        border-style: solid;
+        border-color: whitesmoke;
+        box-shadow: black 8px 8px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+    .challenge {
+            color: whitesmoke;
+            margin-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+    .challenge a{
+        color: whitesmoke;
+    }
+    </style>
+    <div class='wrapper'>
+        <div class='header'>
+            <h1>Level One</h1>
+        </div>
+        <div class='challenge'>
+            <h3>Find the flag</h3>
+            <a href="Good_job," type="hidden"></a>
+            <a href="now_you_must_choose" type="hidden"></a>
+            <a href="between_the" type="hidden"></a>
+            <a href="real key -> CODING " type="hidden"></a>
+            <a href="or_the" type="hidden"></a>
+            <a href="fake key -> DOJO " type="hidden"></a>
+            <a href="choose_wisely" type="hidden"></a>
+            <form action='firstFlag' method="POST">
+                {% csrf_token %}
+                <input type="text" name='test'>
+                <input type="submit" name='submit'>
+            </form>
+            <br>
+            <br>
+            <a href='/' name='logout' value='Logout'>Logout</a>
+        </div>
+    </div>
+</body>
+</html>

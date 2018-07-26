@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8" />
+   
+    <title>Hell</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="{% static 'ctf_app/HellPic.jpg' %} " />
+</head>
+<body>
+    <style>
+              .wrapper{
+        display: inline-block;
+        height: 1000px;
+        width: 970px;
+        background-color: black;
+        }
+        .header{
+        color: red;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: black;
+        height: 100px;
+        width: 900px;
+        border-radius: 8px;
+        border-style: solid;
+        border-color: red;
+        box-shadow: black 8px 8px;
+        margin-left: 30px;
+        margin-top: 10px;
+        }
+        .challenge{
+            color: whitesmoke;
+            margin-top: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        </style>
+    
+        {% load staticfiles %}
+        <div class="wrapper">
+            <div class="header">
+                <h1>Welcome to Hell.</h1>
+            </div>
+            <div class="challenge">
+                <img src=" {% static 'ctf_app/HellPic.jpg' %}" alt='Hell pic'>
+                <br>
+                <form action='HellLogic' method="POST">
+                    {% csrf_token %}
+                    <input type="text" name='test2'>
+                    <input type="submit" name='submit'>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
